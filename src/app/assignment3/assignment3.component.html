@@ -1,0 +1,9 @@
+<button (click)="onDisplayParagraph()">Display Details</button>
+<p *ngIf="displayParagraph">This is just a paragraph</p>
+
+<p
+  *ngFor="let buttonClickLog of buttonClickLogs; let i = index"
+  [ngStyle]="{ background: i >= 4 ? 'blue' : 'transparent' }"
+>
+  {{ buttonClickLog }}
+</p>
